@@ -1,0 +1,69 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:c5e60a979093ec62f948884544b643210af2845a84cb3f1958f4b16ebfff6810
+#1 transferring dockerfile: 398B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:13727a4ae46d36e250be48355a27a65160012ca0af1d4078b52079afa6e1ffae
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/golang:1.18-alpine
+#4 sha256:5ab389a9ce7d05dd73e1c3fac09e560b8a5245b53f199de5e69e11d6a380af08
+#4 ...
+
+#3 [internal] load metadata for gcr.io/distroless/base-debian11:latest
+#3 sha256:002d7fd0744e14ab474f7844954822637600fc01d03bc97e5dfe922754133999
+#3 DONE 0.7s
+
+#4 [internal] load metadata for docker.io/library/golang:1.18-alpine
+#4 sha256:5ab389a9ce7d05dd73e1c3fac09e560b8a5245b53f199de5e69e11d6a380af08
+#4 DONE 1.1s
+
+#6 [build 1/7] FROM docker.io/library/golang:1.18-alpine@sha256:77f25981bd57e60a510165f3be89c901aec90453fd0f1c5a45691f6cb1528807
+#6 sha256:8e843610529fd57abb219b06dabadfa4314133d72493e8cf986f64cdebfd3bda
+#6 DONE 0.0s
+
+#5 [stage-1 1/3] FROM gcr.io/distroless/base-debian11@sha256:0b9ec3cfe2fef19e5514290c666e0bb3fca2baf61df05550b4712ddaea1d3693
+#5 sha256:305cda50944aa4a2d900094ea46329e84606dcbb82c4ef44c3e7dc38f7d398f1
+#5 DONE 0.0s
+
+#8 [internal] load build context
+#8 sha256:44993f90396348950af6906fd9cfd3da6ff5c00036afd7d27e2af6e45b160770
+#8 transferring context: 82B done
+#8 DONE 0.0s
+
+#9 [build 3/7] COPY go.mod .
+#9 sha256:5221470196fe34851e0f5e1435ac86ee3f5ee9557ecc2eeabe68575a0dd21637
+#9 CACHED
+
+#12 [build 6/7] COPY *.go ./
+#12 sha256:3a5cc12ce37b1cd93f31924d8726132ffe2de792abca11b6d432e7b761cb725d
+#12 CACHED
+
+#13 [build 7/7] RUN go build -o ./go-docker-roach
+#13 sha256:525f180c860887ad880c1688c0036424b87d749b75a5ab70cb17b0e32cc5e761
+#13 CACHED
+
+#10 [build 4/7] COPY go.sum .
+#10 sha256:20e8b2e4c378a0038861922d5b536a13481cc8fcf200f788c25d668b13b684da
+#10 CACHED
+
+#11 [build 5/7] RUN go mod download
+#11 sha256:fa442715c20634ad3f68fbe4c8d145518ea98c5d3ffd536c9d805a14cfe8c288
+#11 CACHED
+
+#7 [build 2/7] WORKDIR /app
+#7 sha256:d6380334bebc413dfd43e282fd9938487ab8190f09c8b3cda45e727a8954b991
+#7 CACHED
+
+#14 [stage-1 2/3] COPY --from=build /app/go-docker-roach ./go-docker-roach
+#14 sha256:18fb591d4ffa543c9284efcfaa6e28a27b9815542d549c572ccbc4266433216a
+#14 CACHED
+
+#15 exporting to image
+#15 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#15 exporting layers done
+#15 writing image sha256:29a46452100e48048b06850cb3489d73863ebde256736b3298d036b49a03fdb8 done
+#15 naming to docker.io/library/go-rest-db done
+#15 DONE 0.0s
